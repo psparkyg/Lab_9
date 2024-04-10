@@ -17,6 +17,7 @@ def encode(password="12345678"):
 
     return encoded_pass_string
 
+
 if __name__ == "__main__":
     print("Menu")
     print("-------------")
