@@ -1,3 +1,5 @@
 
 def main():
-    pass
+    print("Updating code")
+
+main()
