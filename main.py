@@ -17,7 +17,7 @@ def encode(password="12345678"):
 
     return encoded_pass_string
 
-def decoder(encoded_password):
+def decode(encoded_password):
     decode_list = []
     for i in encoded_password:
         if int(i) <= 2:
@@ -55,6 +55,6 @@ if __name__ == "__main__":
         encoded_password = encode(password=inputted_pass)
         print("Your password has been encoded and stored!")
     elif option == 2:
-        pass
+        print(f"The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}")
     elif option == 3:
         exit()
