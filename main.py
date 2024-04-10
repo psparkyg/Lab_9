@@ -33,28 +33,29 @@ def decode(encoded_password):
     return decoded_password
 
 if __name__ == "__main__":
-    print("Menu")
-    print("-------------")
-
     # Encoded password variable
     encoded_password = "000000"
 
-    menu = [
-        "1. Encode",
-        "2. Decode",
-        "3. Quit"
-    ]
+    while True:
+        print("Menu")
+        print("-------------")
 
-    for i in menu:
-        print(i, end="\n")
+        menu = [
+            "1. Encode",
+            "2. Decode",
+            "3. Quit"
+        ]
 
-    option = int(input("\nPlease enter an option: "))
-    inputted_pass = input("Please enter your password to encode: ")
+        for i in menu:
+            print(i, end="\n")
 
-    if option == 1:
-        encoded_password = encode(password=inputted_pass)
-        print("Your password has been encoded and stored!")
-    elif option == 2:
-        print(f"The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}")
-    elif option == 3:
-        exit()
+        option = int(input("\nPlease enter an option: "))
+
+        if option == 1:
+            inputted_pass = input("Please enter your password to encode: ")
+            encoded_password = encode(password=inputted_pass)
+            print("Your password has been encoded and stored!\n")
+        elif option == 2:
+            print(f"The encoded password is {encoded_password}, and the original password is {decode(encoded_password)}")
+        elif option == 3:
+            exit()
