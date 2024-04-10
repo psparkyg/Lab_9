@@ -17,6 +17,20 @@ def encode(password="12345678"):
 
     return encoded_pass_string
 
+def decoder(encoded_password):
+    decode_list = []
+    for i in encoded_password:
+        if int(i) <= 2:
+            if int(i) == 0:
+                decode_list.append(str(7))
+            elif int(i) == 1:
+                decode_list.append(str(8))
+            else:
+                decode_list.append(str(9))
+        else:
+            decode_list.append(str(int(i)-3))
+    decoded_password = "".join(decode_list)
+    return decoded_password
 
 if __name__ == "__main__":
     print("Menu")
